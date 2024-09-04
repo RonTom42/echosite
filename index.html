@@ -1,0 +1,9 @@
+<p></p>You selected <div id="value"></div></p>
+<script>
+    var url = window.location.href;
+    // or window.location.href for current url
+    var captured = /action=([^&]+)/.exec(url)[1];
+    // Value is in [1] ('384' in our case)
+    var result = captured ? captured : 'myDefaultValue';
+    document.getElementById("value").innerHTML = result;
+</script>
